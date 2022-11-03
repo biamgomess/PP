@@ -8,6 +8,14 @@
 
 int main(void){
     int x;
-    printf("Digite um número: ");
-    scanf("%d")
+    int soma;
+    soma = 0;
+    printf("Digite um numero: ");
+    scanf("%d", &x);
+    while(x>0){
+        soma = soma + x;
+        x = x - 1;
+    }
+    printf("Soma = %d", soma);
+    return 0;
 }
