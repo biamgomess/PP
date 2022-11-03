@@ -10,11 +10,12 @@
 int main(void){
     float altura;
     int peso;
-
-    printf("Qual é sua altura? ");
-    scanf("%f", &altura);
+    
     printf("Qual é o seu peso? ");
     scanf("%d", &peso);
+    printf("Qual é sua altura? ");
+    scanf("%f", &altura);
+    
 
     float imc;
     imc = peso / (altura*altura);
