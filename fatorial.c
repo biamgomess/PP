@@ -8,7 +8,15 @@
 
 int main(void){
     int x;
-    printf("Digite um número: ");
+    int fatorial;
+    fatorial = 1;
+    printf("Digite um numero: ");
     scanf("%d", &x);
-    while(x)
+    while(x>0){
+        fatorial = fatorial * x;
+        x = x - 1;
+
+    }
+     printf("Fatorial = %d", fatorial);
+    return 0;
 }
