@@ -8,5 +8,7 @@
 
 int main(void){
     int x;
-    
+    printf("Digite um número: ");
+    scanf("%d", &x);
+    while(x)
 }
