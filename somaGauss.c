@@ -10,7 +10,7 @@ int main(void){
     int x;
     int soma;
     soma = 0;
-    printf("Digite um numero logo: ");
+    printf("Digite um numero: ");
     scanf("%d", &x);
     while(x>0){
         soma = soma + x;
