@@ -19,11 +19,11 @@ int main(void) {
     scanf("%d", &n);
 
      if (n >= 0) {
-    printf("%d\n", a);
+    printf("%d, ", a);
     }
 
     if (n >= 1){
-        printf("%d\n", b);
+        printf("%d, ", b);
     }
 
     
@@ -35,6 +35,8 @@ int main(void) {
         a = b;
         b = auxiliar;
 
-        printf("%d\n", auxiliar);
+        printf("%d, ", auxiliar);
     }
+    printf("...");
+    return 0;
 }

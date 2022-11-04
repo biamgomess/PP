@@ -1,26 +1,26 @@
 /*
 * Arquivo: aritmInt.c
-* Data de criação: 03.nov.22
+* Data de criação: 04.nov.22
 * Beatriz Martins Gomes 
 */
 
 #include <stdio.h>
+int fatorial(int x);
 
 int main(void){
-    int x;
-    int auxiliar;
+    fatorial;
 
+
+}
+int fatorial(int x){
+    int x;
     int fatorial;
     fatorial = 1;
     printf("Digite um numero: ");
     scanf("%d", &x);
-    auxiliar = x;
-
     while(x>0){
         fatorial = fatorial * x;
         x = x - 1;
-
-    }
-     printf("%d! = %d", auxiliar, fatorial);
-    return 0;
+    return fatorial;
+}
 }
