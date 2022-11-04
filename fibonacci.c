@@ -18,11 +18,15 @@ int main(void) {
     printf("Digite um número: ");
     scanf("%d", &n);
 
+     if (n >= 0) {
+    printf("%d\n", a);
+    }
+
+    if (n >= 1){
+        printf("%d\n", b);
+    }
+
     
-    if (n == 1){
-        printf("%d\n", a);
-    } 
-   
     int i;
     int auxiliar; 
     
@@ -31,6 +35,6 @@ int main(void) {
         a = b;
         b = auxiliar;
 
-        printf(" %d, ", auxiliar);
+        printf("%d\n", auxiliar);
     }
 }
