@@ -16,6 +16,6 @@ int main(void){
         soma = soma + x;
         x = x - 1;
     }
-    printf("Soma = %d", soma);
+    printf("%d", soma);
     return 0;
 }
