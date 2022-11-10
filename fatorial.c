@@ -5,15 +5,18 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <inttypes.h>
+
 
 int main(void){
-    int x;
+    int64_t x;
     int auxiliar;
 
-    int fatorial;
+    int64_t fatorial;
     fatorial = 1;
     printf("Digite um numero: ");
-    scanf("%d", &x);
+    scanf("%lld", &x);
     auxiliar = x;
 
     while(x>0){
@@ -21,6 +24,6 @@ int main(void){
         x = x - 1;
 
     }
-     printf("%d! = %d", auxiliar, fatorial);
+     printf("%d! = %lld", auxiliar, fatorial);
     return 0;
 }
