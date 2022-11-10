@@ -1,5 +1,5 @@
 /*
-* Arquivo: aritmInt.c
+* Arquivo: fatorial.c
 * Data de criação: 03.nov.22
 * Beatriz Martins Gomes 
 */
