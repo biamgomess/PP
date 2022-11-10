@@ -1,6 +1,6 @@
 /*
 * Arquivo: aritmInt.c
-* Data de criação: 09.nov.22
+* Data de criação: 10.nov.22
 * Beatriz Martins Gomes 
 */
 
@@ -11,37 +11,38 @@
 #endif
 #define M_PI 3.141592653589793115997963468544185161590576171875
 
+int fatorial(int i);
+
 int main(void) {
-    int x;
-    float f;
-
-    printf("Digite um número: ");
-    scanf("%d", &x);
-    printf("Digite um número: ");
-    scanf("%f", &f);
-
+    int n;
     int i;
-    i = 0;
-
+    float x;
     float cos;
-    cos = 0;
+    printf("Digite um numero para n: ");
+    scanf("%d", &n);
+    printf("Digite um numero para x: ");
+    scanf("%f", &x);
+    x = x * M_PI;
+    for (i=0; i<=n; i++){
+        cos = cos + ((pow(-1,i))* (((pow(x,(2*i))))/(fatorial(i))));
 
-    int y;
-    y = 1;
-
-    int fatorial;
-    fatorial = 1;
-
-    while (i<=x) {
-        while (y<=2*i){
-            fatorial = fatorial * y;
-            y = y + 1;
-        }
-        cos = cos + (pow(-1,i)*(pow(M_PI*i,2*i)/fatorial));
-        i = i + 1;
     }
     printf("%.5f", cos);
     return 0;
-
-
+    
+}
+int fatorial(int i){
+    int a;
+    int b;
+    int resultado;
+    resultado = 1;
+    a = 2 * i;
+    b = 1;
+    
+    while (b<=a){
+        resultado = resultado * b;
+        b = b + 1;
+    }
+    
+    return resultado;
 }
