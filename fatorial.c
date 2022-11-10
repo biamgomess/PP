@@ -1,6 +1,6 @@
 /*
 * Arquivo: fatorial.c
-* Data de criação: 03.nov.22
+* Data de criação: 09.nov.22
 * Beatriz Martins Gomes 
 */
 
