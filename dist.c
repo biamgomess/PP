@@ -1,7 +1,7 @@
 /*
 * Arquivo: dist.c
-* Data de criação: 24.nov.22
-* Beatriz Martins Gomes 
+* Data de criação: 25.nov.22
+* Beatriz Martins Gomes Silva
 */
 
 #include <stdio.h>
