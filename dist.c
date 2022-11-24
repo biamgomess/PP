@@ -25,5 +25,8 @@ int main (void){
 
     printf("%g", dist2);
 
+    return 0;
+    
+
 
 }

@@ -1,7 +1,7 @@
 /*
 * Arquivo: cosTaylor.c
 * Data de criação: 10.nov.22
-* Beatriz Martins Gomes 
+* Beatriz Martins Gomes  Silva
 */
 
 #include <stdio.h>
@@ -18,9 +18,9 @@ int main(void) {
     int i;
     float x;
     float cos;
-    printf("Digite um numero para n: ");
+    printf("Digite um número para n: ");
     scanf("%d", &n);
-    printf("Digite um numero para x: ");
+    printf("Digite um número para x: ");
     scanf("%f", &x);
     x = x * M_PI;
     for (i=0; i<=n; i++){
