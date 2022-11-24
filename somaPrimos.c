@@ -6,35 +6,34 @@
 
 #include <stdio.h>
 
-int main (void){
+int main(void){
     int a;
     int b;
     printf("Digite um intervalo (em que a < b): ");
 
     scanf("%d %d", &a, &b);
 
-
-    int primos;
-    int aux;
-
     int i;
+    int aux;
     int j;
-
-    for(i=a; a <= b; i++){
-        primos = 0;
-        for (j=1;j<=i;j++){
-            if((i%j)==0){
-                primos = primos + 1;
+    int soma;
+    soma = 0;
+    for (int i=a+1;i<b;i++){
+        aux = 1;
+        for (j=2;j<i;j++){
+            if((i%j)== 0){
+                aux = 0;
             }
         }
-        if(primos == 2){
-            aux = aux + 1;
-        }
-        
-
+    if(aux == 1){
+        soma = soma + i;
     }
-    printf("%d", aux);
     
-    return 0;
+    } 
+   
 
-}
+    printf("%d", soma);
+    return 0;
+}    
+    
+    
