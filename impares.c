@@ -4,6 +4,8 @@
 * Beatriz Martins Gomes 
 */
 
+#include <stdio.h>
+
 int main (void){
     int a;
     int b;
@@ -15,10 +17,10 @@ int main (void){
     int i;
     for(i = a; i < b; i++){
         if ((i%2)!= 0){
-            printf("%d, ", i);
+            printf("%d ", i);
         }
     if ((b%2) != 0) {
-        printf("%d", b);
+        printf("%i", b);
 
     }   
     
