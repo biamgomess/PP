@@ -1,5 +1,5 @@
 /*
-* Arquivo: aritmInt.c
+* Arquivo: cosTaylor.c
 * Data de criação: 10.nov.22
 * Beatriz Martins Gomes 
 */
