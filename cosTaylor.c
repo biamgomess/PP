@@ -40,7 +40,7 @@ int fatorial(int i){
     b = 1;
     
     while (b<=a){
-        resultado = resultado * b;
+        resultado = (resultado * b);
         b = b + 1;
     }
     
