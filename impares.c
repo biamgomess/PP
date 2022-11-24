@@ -7,7 +7,7 @@
 int main (void){
     int a;
     int b;
-    printf("Digite um intervalo (em que a < b):");
+    printf("Digite um intervalo (em que a < b): ");
 
     scanf("%d %d", &a, &b);
 
