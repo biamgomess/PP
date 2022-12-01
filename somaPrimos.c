@@ -30,8 +30,6 @@ int main(void){
     }
     
     } 
-   
-
     printf("%d", soma);
     return 0;
 }    
