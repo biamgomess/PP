@@ -26,10 +26,11 @@ int main(void){
         vetor_b[i]= vetor_a[i+1]- vetor_a[i];
 
     } 
-    printf("%g", vetor_b[0]);
+    
     for(i=1; i<N-1;i++){
-        printf(", %g", vetor_b[i]);
+        printf("%g, ", vetor_b[i]);
     }
+    
     maxMin(vetor_b,N-1);
     return 0;
 }
