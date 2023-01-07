@@ -1,6 +1,6 @@
 /*
-* Arquivo: mdc.c
-* Data de criação: 05.jan.23
+* Arquivo: racionais.c
+* Data de criação: 06.jan.23
 * Beatriz Martins Gomes 
 */
 
@@ -8,147 +8,99 @@
 #include <stdio.h>
 
 typedef
-    struct Racionais{
-        int numerador, denominador;     
-  } 
-Racionais;
+    struct Racional{
+        int numerador, denominador;
+    }
+Racional;
 
+int mdc(int a, int b);
+int mod(int a);
 
-int mdc(int n,int m);
 
 int main(void){
-    Racionais Q1;
-    Racionais Q2;
-    int n;
-    int m;
-    int n1;
-    int m1;
-    int mdc1;
-    int mdc2;
-
-
+    Racional Q;
+    Racional P;
+    Racional Soma;
+    Racional Sub;
+    Racional Mult;
+    Racional Div;
+    int c;
     printf("Entre com o primeiro numero racional: ");
-    scanf("%d", &n);
-    scanf("%d", &m);
+    scanf("%d %d",&Q.numerador, &Q.denominador);
     printf("Entre com o segundo numero racional: ");
-    scanf("%d", &n1);
-    scanf("%d", &m1);
+    scanf("%d %d", &P.numerador, &P.denominador);
+    if((Q.denominador)<0){
+        Q.denominador = Q.denominador *(-1);
+        Q.numerador = Q.numerador * (-1);
+    }
+
+    if((P.denominador)<0){
+        P.denominador = P.denominador * (-1);
+        P.numerador = P.numerador * (-1);
+    }
     
+    c = Q.numerador;
+    Q.numerador = Q.numerador/mdc(mod(Q.numerador),mod(Q.denominador));
+    Q.denominador = Q.denominador/mdc(mod(c),mod(Q.denominador));
 
-    mdc1= mdc(n,m);
-    mdc2= mdc(n1,m1);
-
-    Q1.numerador = (n / mdc1);
-    Q1.denominador = (m /m1);
-    Q2.numerador = (n1/mdc2);
-    Q2.denominador =(m1/mdc2);
-
-    if(Q1.denominador<0){
-        Q1.denominador *= (-1);
-        Q1.numerador *= (-1);
-    }
-   
-    if(Q2.denominador<0){
-        Q2.denominador *= (-1);
-        Q2.numerador *= (-1);
-    }
+    c = P.numerador;
+    P.numerador = P.numerador/mdc(mod(P.numerador), P.denominador);
+    P.denominador = P.denominador/mdc(mod(c),P.denominador);
 
 
-    printf("%d/%d", Q1.numerador, Q1.denominador);
-    printf(" ");
-    printf("%d/%d", Q2.numerador, Q2.denominador);
-    printf(" ");
+    Soma.numerador= ((Q.numerador)* (P.denominador)) + ((P.numerador)*(Q.denominador));
+    Soma.denominador = ((Q.denominador)*(P.denominador));
 
-    //soma
-    n = ((Q1.numerador * Q2.denominador));
-    m = ((Q2.numerador * Q1.denominador));
-    n1 = n + m;
-    m1 = ((Q1.denominador * Q2.denominador));
+    Sub.numerador = ((Q.numerador)*(P.denominador)) - ((P.numerador)*(Q.denominador));
+    Sub.denominador = (Q.denominador)*(P.denominador);
 
-    if (n1==0){
-        m1 = 1;
-    }
-    mdc1 = mdc(n1,m1);
-    n1 = (n1/mdc1);
-    m1= (m1/mdc1);
+    Mult.numerador = (Q.numerador) * (P.numerador);
+    Mult.denominador = (Q.denominador) * (P.denominador);
 
-    if (m1<0){
-        n1 = n1 * (-1);
-        m1 = m1 * (-1);
+    Div.numerador = (Q.numerador) * (P.denominador);
+    Div.denominador = (Q.denominador) * (P.numerador);
 
-    }
-    printf("%d/%d", n1,m1);
-    printf(" ");
+    c = Soma.numerador;
+    Soma.numerador = Soma.numerador/mdc(mod(Soma.numerador),Soma.denominador);
+    Soma.denominador = Soma.denominador/mdc(mod(c), Soma.denominador);
 
-    // subtração
-    n = ((Q1.numerador * Q2.denominador));
-    m = ((Q2.numerador * Q1.denominador));
-    n1 = n - m;
-    m1 = (Q1.denominador * Q2.denominador);
+    c= Sub.numerador;
+    Sub.numerador = Sub.numerador/mdc(mod(Sub.numerador),Sub.denominador);
+    Sub.denominador = Sub.denominador/mdc(mod(c),Sub.denominador);
 
-    if (n1==0){
-        m1 = 1;
+    c = Mult.numerador;
+    Sub.numerador = Mult.numerador/mdc(mod(Mult.numerador),Mult.denominador);
+    Sub.denominador = Mult.denominador/mdc(mod(c),Mult.denominador);
+
+    c = Div.numerador;
+    Div.numerador = Div.numerador/mdc(mod(Div.numerador),mod(Mult.denominador));
+    Mult.denominador = Div.numerador/mdc(mod(c),mod(Div.denominador));
+
+    if(Div.denominador<0){
+        Div.denominador = Div.denominador *(-1);
+        Div.numerador = Div.numerador*(-1);
     }
 
-    mdc1 = mdc(n1,m1);
-    n1 = (n1/mdc1);
-    m1= (m1/mdc1);
-     if (m1<0){
-        n1 = n1 * (-1);
-        m1 = m1 * (-1);
-    }
 
-    printf("%d/%d", n1,m1);
-    printf(" ");
-
-    // multiplicação
-
-    n = ((Q1.numerador * Q2.denominador));
-    m = ((Q2.numerador * Q1.denominador));
-
-    if(n==0){
-        m = 1;
-    }
-
-    mdc1= mdc(n,m);
-    n = (n/mdc1);
-    m = (m/mdc1);
-    
-    if(m<0){
-        n = n * (-1);
-        m = m * (-1);
-    }
-    printf("%d/%d", n,m);
-    printf(" ");
-
-    // divisão
-    n = ((Q1.numerador * Q2.denominador));
-    m = ((Q2.numerador * Q1.denominador));
-
-     if(n==0){
-        m = 1;
-    }
-    mdc1= mdc(n,m);
-    n = (n/mdc1);
-    m = (m/mdc1);
-    
-    if(m<0){
-        n = n * (-1);
-        m = m * (-1);
-    }
-    printf("%d/%d", n,m);
-    printf(" ");
-    
-
+    printf("%d/%d %d/%d %d/%d %d/%d %d/%d %d/%d",Q.numerador,Q.denominador, P.numerador, P.denominador,Soma.numerador,Soma.denominador,Sub.numerador, Sub.denominador,Mult.numerador,Mult.denominador,Div.numerador,Div.denominador);
     return 0;
-}
-int mdc(int n, int m){
-    if (m == 0){
-        return n;
 
+    
+}
+
+int mdc(int a, int b){
+    if (b==0){
+        return a;
     }
     else{
-        return(mdc(m, n%m));
+        mdc(b,(a%b));
     }
-
-}    
+}
+int mod(int a){
+    if(a<0){
+        return(a*(-1));
+    }
+    else{
+        return a;
+    }
+}
