@@ -1,12 +1,9 @@
 /*
 * Arquivo: racionais.c
-* Data de criação: 06.jan.23
+* Data de criação: 12.jan.23
 * Beatriz Martins Gomes 
 */
-
-
 #include <stdio.h>
-
 typedef
     struct Racional{
         int numerador, denominador;
